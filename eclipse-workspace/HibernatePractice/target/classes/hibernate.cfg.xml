@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- SQLite JDBC Driver -->
+        <property name="hibernate.connection.driver_class">
+            org.sqlite.JDBC
+        </property>
+
+        <!-- SQLite Database Path -->
+        <property name="hibernate.connection.url">
+            jdbc:sqlite:C:/sqlite/IndianPremierLeague2.db
+        </property>
+
+        <!-- SQLite Dialect -->
+        <property name="hibernate.dialect">
+            org.sqlite.hibernate.dialect.SQLiteDialect
+        </property>
+
+        <!-- Show SQL Queries -->
+        <property name="hibernate.show_sql">
+            true
+        </property>
+
+        <!-- Format SQL Output -->
+        <property name="hibernate.format_sql">
+            true
+        </property>
+
+        <!-- Auto Create/Update Table -->
+        <property name="hibernate.hbm2ddl.auto">
+            update
+        </property>
+
+        <!-- Session Context -->
+        <property name="current_session_context_class">
+            thread
+        </property>
+
+        <!-- Entity Mapping -->
+        <mapping class="IPL.Ipl"/>
+
+    </session-factory>
+</hibernate-configuration>
